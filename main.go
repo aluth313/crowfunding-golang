@@ -1,7 +1,7 @@
 package main
 
 import (
-	"bwastartup/usernya"
+	"bwastartup/user"
 	"log"
 	"net/http"
 
@@ -42,7 +42,7 @@ func handler(c *gin.Context) {
 		log.Fatal(err.Error())
 	}
 
-	var users []usernya.User
+	var users []user.User
 	db.Find(&users)
 
 	c.JSON(http.StatusOK, users)

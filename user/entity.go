@@ -1,4 +1,4 @@
-package usernya
+package user
 
 import "time"
 
